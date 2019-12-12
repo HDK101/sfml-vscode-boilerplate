@@ -6,12 +6,12 @@ int main()
 	std::cout << "Hello World!" << std::endl;
 #endif
 
-	sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
+	sf::RenderWindow window(sf::VideoMode(640, 480), "SFML works!");
 #ifdef SFML_SYSTEM_WINDOWS
 	__windowsHelper.setIcon(window.getSystemHandle());
 #endif
 
-	sf::CircleShape shape(window.getSize().x/2);
+	sf::CircleShape shape(window.getSize().x / 2);
 	shape.setFillColor(sf::Color::White);
 
 	sf::Texture shapeTexture;
@@ -19,11 +19,13 @@ int main()
 	shape.setTexture(&shapeTexture);
 
 	sf::Event event;
+	sf::Clock clock;
 
 	while (window.isOpen())
 	{
 		while (window.pollEvent(event))
 		{
+
 			if (event.type == sf::Event::Closed)
 				window.close();
 		}

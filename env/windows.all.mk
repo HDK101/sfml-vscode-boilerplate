@@ -1,6 +1,6 @@
 CC := g++.exe
 
-_MINGW := C:/mingw32/bin
+_MINGW := C:/mingw64/bin
 _SFML := C:/SFML-2.5.1
 _SFML_BIN := $(_SFML)/bin
 
